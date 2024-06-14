@@ -1,0 +1,15 @@
+def merge_the_tools(string, k):
+    # your code goes here
+    
+    new_str =''
+    for i in range(0, len(string), k):
+        #print(strig[i:i+k])
+        for letter in string[i:i+k]:
+            if letter not in new_str:
+                new_str = new_str + letter
+        print(new_str)
+        new_str = ''
+            
+        
+    
+if __name__ == '__main__':
