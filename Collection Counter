@@ -1,0 +1,28 @@
+Enter your code here. Read input from STDIN. Print output to STDOUT from collections import Counter
+
+
+no_of_shoes = int(input())
+inventory = list(map(int,input().split()))
+size_availability = Counter(inventory)
+customers = int(input())
+
+#print("no_of_shoes", no_of_shoes)
+#print("inventory", inventory)
+#print("size_availability", size_availability)
+
+earnings = 0
+
+for cust in range(customers):
+    size, price = list(map(int,input().split()))
+    #print(size, price)
+    
+    if size_availability[size]:
+        earnings = earnings + price
+        size_availability[size] -= 1
+        
+print(earnings)
+    
+    
+    
+    
+    
